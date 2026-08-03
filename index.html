@@ -190,6 +190,16 @@ z-index:999;
 transform:scale(1.1);
 background:#1976d2;
 }
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
 </head>
 
@@ -216,7 +226,7 @@ background:#1976d2;
     </a>
 </header>
 
-<section id="about">
+<section id="about" class="reveal">
 
 <h2>About Me</h2>
 
@@ -232,7 +242,7 @@ Hello! I am <b>Sayeedur Rahman</b>, an educator, website owner and content creat
         <li>1+ Years of Teaching Experience</li>
     </ul>
 </section>
-<section id="skills">
+<section id="skills" class="reveal">
 
 <section>
 
@@ -255,7 +265,7 @@ Hello! I am <b>Sayeedur Rahman</b>, an educator, website owner and content creat
 </ul>
 
 </section>
-<section id="services">
+<section id="services" class="reveal">
     <h2>My Services</h2>
 
 <div class="services-grid">
@@ -292,7 +302,7 @@ Hello! I am <b>Sayeedur Rahman</b>, an educator, website owner and content creat
 
 </div>
 </section>
-<section class="contact" id="contact">
+<section class="contact reveal" id="contact">
 
 <h2>Contact Me</h2>
 
