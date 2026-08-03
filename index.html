@@ -327,6 +327,22 @@ Follow Me on Instagram
 </footer>
 <a href="https://wa.me/919124478453" class="whatsapp" target="_blank">💬</a>
 <a href="#" class="top-btn">⬆️</a>
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function reveal() {
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const top = el.getBoundingClientRect().top;
+    if (top < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+</script>
 </body>
 
 </html>
