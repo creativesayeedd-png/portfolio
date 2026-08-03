@@ -1781,3 +1781,18 @@ body::after{
     box-shadow:
         0 15px 45px rgba(0,255,255,.18);
 }
+/* ===========================
+   PREMIUM NAVBAR
+=========================== */
+
+header{
+    transition:all .4s ease;
+}
+
+header.scrolled{
+    background:rgba(8,10,20,.82);
+    backdrop-filter:blur(28px);
+    -webkit-backdrop-filter:blur(28px);
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
