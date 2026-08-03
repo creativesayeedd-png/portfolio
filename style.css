@@ -1670,4 +1670,73 @@ height:250px;
 }
 
 }
+/* ===============================
+   PREMIUM ANIMATED BACKGROUND
+================================= */
 
+body{
+    background: linear-gradient(-45deg,
+        #0f172a,
+        #111827,
+        #1e293b,
+        #020617);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#00f7ff33;
+    border-radius:50%;
+    filter:blur(120px);
+    top:-150px;
+    left:-150px;
+    animation:blob1 12s infinite alternate;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#7c3aed33;
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-150px;
+    right:-150px;
+    animation:blob2 15s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes blob1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(180px,120px);
+    }
+}
+
+@keyframes blob2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-180px,-120px);
+    }
+}
