@@ -1610,4 +1610,64 @@ height:250px;
     color:#00d4ff;
 
 }
+/* ===== Better Mobile Hero ===== */
+
+@media (max-width:768px){
+
+.hero{
+
+    padding-top:110px;
+    min-height:auto;
+}
+
+.hero-container{
+
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:40px;
+}
+
+.hero-content{
+
+    width:100%;
+    max-width:100%;
+    text-align:center;
+}
+
+.hero-description{
+
+    max-width:100%;
+}
+
+.hero-buttons{
+
+    width:100%;
+    justify-content:center;
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+    max-width:350px;
+}
+
+.social-icons{
+
+    justify-content:center;
+}
+
+.hero-image{
+
+    width:100%;
+}
+
+.image-box{
+
+    width:280px;
+    height:280px;
+    margin:auto;
+}
+
+}
 
