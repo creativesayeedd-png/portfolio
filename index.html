@@ -5,7 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sayeedur Rahman | Professional Educator</title>
+<title> <meta name="description" content="Professional Teacher Portfolio of Sayeedur Rahman - D.El.Ed & CTET Qualified Educator specializing in English and Social Science.">
+
+<meta name="keywords" content="Teacher, English Teacher, SST Teacher, D.El.Ed, CTET, Portfolio, Educator">
+
+<meta name="author" content="Sayeedur Rahman">
+
+<meta property="og:title" content="Sayeedur Rahman | Professional Educator">
+
+<meta property="og:description" content="Professional Teaching Portfolio">
+
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="images/profile.jpg"> Sayeedur Rahman | Professional Educator</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,6 +198,26 @@ margin-right:15px;
 margin-bottom:15px;
 
 transition:.3s;
+
+}
+    .btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+margin:10px;
+background:#fff;
+color:#1565C0;
+transition:.35s;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#1565C0;
+color:#fff;
+}
 
 }
 
@@ -410,11 +442,636 @@ gap:20px;
 margin-top:30px;
 text-align:center;
 }
+/* Dark Mode */
+
+.dark-mode{
+background:#121212;
+color:#ffffff;
+transition:.4s;
+}
+
+.dark-mode nav{
+background:#1e1e1e;
+}
+
+.dark-mode .card,
+.dark-mode .service-card,
+.dark-mode .certificate-card{
+background:#222;
+color:#fff;
+}
+
+.dark-mode footer{
+background:#000;
+}
+
+.dark-toggle{
+position:fixed;
+top:20px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#1565C0;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.dark-toggle:hover{
+transform:rotate(180deg);
+}
+/* Reading Progress Bar */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+width:0%;
+height:5px;
+background:linear-gradient(90deg,#00c6ff,#1565C0,#6a11cb);
+z-index:99999;
+transition:width .1s linear;
+box-shadow:0 2px 10px rgba(21,101,192,.5);
+}
+/* Premium Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+transition:.35s;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Lightbox */
+
+#lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:100000;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+#closeLightbox{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+/* Floating Background */
+
+.bg-animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.bg-animation span{
+position:absolute;
+display:block;
+width:25px;
+height:25px;
+background:rgba(21,101,192,.12);
+border-radius:50%;
+animation:float 18s linear infinite;
+bottom:-150px;
+}
+
+.bg-animation span:nth-child(1){left:10%;animation-duration:14s;width:30px;height:30px;}
+.bg-animation span:nth-child(2){left:25%;animation-duration:20s;}
+.bg-animation span:nth-child(3){left:40%;animation-duration:17s;width:45px;height:45px;}
+.bg-animation span:nth-child(4){left:55%;animation-duration:23s;}
+.bg-animation span:nth-child(5){left:70%;animation-duration:16s;width:35px;height:35px;}
+.bg-animation span:nth-child(6){left:85%;animation-duration:21s;}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Mouse Glow */
+
+#cursorGlow{
+position:fixed;
+width:160px;
+height:160px;
+border-radius:50%;
+pointer-events:none;
+background:radial-gradient(circle,rgba(21,101,192,.18),transparent 70%);
+transform:translate(-50%,-50%);
+z-index:9998;
+transition:transform .08s linear;
+}
+/* ===== Premium Navbar V2 ===== */
+
+nav{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+max-width:1200px;
+padding:14px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:18px;
+box-shadow:0 10px 35px rgba(0,0,0,.18);
+z-index:9999;
+transition:.35s;
+}
+
+nav.scrolled{
+background:rgba(255,255,255,.95);
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+nav .logo{
+font-size:28px;
+font-weight:700;
+color:#1565C0;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+gap:22px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+padding:10px 16px;
+border-radius:10px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+background:#1565C0;
+color:#fff;
+}
+/* Mobile Menu */
+
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+color:#1565C0;
+user-select:none;
+}
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+}
+
+nav ul{
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:rgba(255,255,255,.98);
+backdrop-filter:blur(15px);
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+display:none;
+border-radius:0 0 20px 20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+nav ul.active{
+display:flex;
+animation:menuSlide .3s ease;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+@keyframes menuSlide{
+
+from{
+opacity:0;
+transform:translateY(-15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* ===== Premium Hero V3 ===== */
+
+.hero{
+position:relative;
+overflow:hidden;
+background:linear-gradient(-45deg,#1565C0,#42A5F5,#7E57C2,#26C6DA);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+border-radius:30px;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+top:-100px;
+left:-100px;
+filter:blur(20px);
+animation:float1 8s ease-in-out infinite;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:250px;
+height:250px;
+background:rgba(255,255,255,.12);
+border-radius:50%;
+bottom:-80px;
+right:-80px;
+filter:blur(20px);
+animation:float2 10s ease-in-out infinite;
+}
+
+@keyframes float1{
+50%{
+transform:translate(40px,40px);
+}
+}
+
+@keyframes float2{
+50%{
+transform:translate(-40px,-30px);
+}
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+color:#fff;
+padding:80px 20px;
+}
+
+.hero-content h1{
+font-size:56px;
+margin-bottom:10px;
+text-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.hero-content h2{
+font-size:26px;
+margin-bottom:20px;
+opacity:.95;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+.profile{
+width:190px;
+height:190px;
+border-radius:50%;
+border:6px solid rgba(255,255,255,.8);
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+transition:.4s;
+}
+
+.profile:hover{
+transform:scale(1.08) rotate(3deg);
+}
+/* ===== Premium 3D Cards ===== */
+
+.card{
+transition:transform .35s ease, box-shadow .35s ease;
+transform-style:preserve-3d;
+will-change:transform;
+}
+
+.card:hover{
+transform:perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.25);
+}
+
+.service-card,
+.certificate-card{
+transition:.35s ease;
+}
+
+.service-card:hover,
+.certificate-card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 40px rgba(21,101,192,.25);
+}
+/* ===== Welcome Toast ===== */
+
+#welcomeToast{
+position:fixed;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+background:#1565C0;
+color:#fff;
+padding:15px 28px;
+border-radius:12px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+z-index:100000;
+opacity:0;
+pointer-events:none;
+transition:.5s;
+}
+
+#welcomeToast.show{
+opacity:1;
+top:40px;
+}
+
+/* Hero Animation */
+
+.hero-content{
+animation:heroFade 1.2s ease;
+}
+
+@keyframes heroFade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Typing Cursor */
+
+#typing::after{
+content:"|";
+animation:blink .7s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:0;
+}
+}
+/* ===== Smooth Page Transition ===== */
+
+body{
+transition:background .4s,color .4s;
+}
+
+/* ===== Cursor Trail ===== */
+
+.trail{
+position:fixed;
+width:12px;
+height:12px;
+border-radius:50%;
+background:#1565C0;
+pointer-events:none;
+z-index:99999;
+opacity:.6;
+animation:trailFade .6s linear forwards;
+}
+
+@keyframes trailFade{
+to{
+transform:scale(2);
+opacity:0;
+}
+}
+
+/* ===== Scroll Progress Circle ===== */
+
+#scrollCircle{
+position:fixed;
+bottom:20px;
+left:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:conic-gradient(#1565C0 0deg,#e5e5e5 0deg);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:14px;
+z-index:9999;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+/* ===== Smooth Page Transition ===== */
+
+body{
+transition:background .4s,color .4s;
+}
+
+/* ===== Cursor Trail ===== */
+
+.trail{
+position:fixed;
+width:12px;
+height:12px;
+border-radius:50%;
+background:#1565C0;
+pointer-events:none;
+z-index:99999;
+opacity:.6;
+animation:trailFade .6s linear forwards;
+}
+
+@keyframes trailFade{
+to{
+transform:scale(2);
+opacity:0;
+}
+}
+
+/* ===== Scroll Progress Circle ===== */
+
+#scrollCircle{
+position:fixed;
+bottom:20px;
+left:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:conic-gradient(#1565C0 0deg,#e5e5e5 0deg);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:14px;
+z-index:9999;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin:30px 0;
+}
+
+.dash-card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.search-box{
+display:flex;
+gap:10px;
+margin-top:25px;
+flex-wrap:wrap;
+}
+
+.search-box input{
+flex:1;
+padding:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.search-box button{
+padding:15px 25px;
+border:none;
+border-radius:10px;
+background:#1565C0;
+color:white;
+cursor:pointer;
+}
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#1565C0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999999;
+color:white;
+}
+
+.spinner{
+width:70px;
+height:70px;
+border:6px solid rgba(255,255,255,.3);
+border-top:6px solid white;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
 </style>
 
 </head>
 
 <body>
+<div id="loader">
+
+<div class="spinner"></div>
+
+<h2>Loading Portfolio...</h2>
+
+</div>
+<div id="scrollCircle">0%</div>
+<div id="welcomeToast">
+👋 Welcome to My Portfolio
+</div>
+<div class="bg-animation">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div id="cursorGlow"></div>
+<div id="progressBar"></div>
+<button class="dark-toggle" id="darkModeBtn">🌙</button>
 
 <nav>
 
@@ -425,6 +1082,9 @@ SR
 </div>
 
 <ul>
+<div class="menu-toggle" id="menuToggle">
+    ☰
+</div> 
 
 <li><a href="#about">About</a></li>
 
@@ -496,7 +1156,38 @@ Apart from teaching, I also create educational content, design portfolio website
 </div>
 
 </section>
+<section class="card fade">
 
+<h2>🧭 Quick Access</h2>
+
+<div class="dashboard">
+
+<div class="dash-card">
+<h3>📅 Date</h3>
+<p id="liveDate"></p>
+</div>
+
+<div class="dash-card">
+<h3>🕒 Time</h3>
+<p id="liveTime"></p>
+</div>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search section...">
+
+<button onclick="searchSection()">
+🔍 Search
+</button>
+
+</div>
+
+</section>
 
 <!-- EDUCATION -->
 
@@ -521,7 +1212,30 @@ Apart from teaching, I also create educational content, design portfolio website
 </div>
 
 </section>
+<section id="gallery" class="card fade">
 
+<h2>📸 Gallery</h2>
+
+<div class="gallery">
+
+<img src="gallery1.jpg" onclick="openImage(this.src)">
+<img src="gallery2.jpg" onclick="openImage(this.src)">
+<img src="gallery3.jpg" onclick="openImage(this.src)">
+<img src="gallery4.jpg" onclick="openImage(this.src)">
+<img src="gallery5.jpg" onclick="openImage(this.src)">
+<img src="gallery6.jpg" onclick="openImage(this.src)">
+
+</div>
+
+</section>
+
+<div id="lightbox">
+
+<span id="closeLightbox">&times;</span>
+
+<img id="lightboxImg">
+
+</div>
 
 <!-- EXPERIENCE -->
 
@@ -714,7 +1428,7 @@ Teaching English and Social Science with concept-based learning and student-frie
 📷 Instagram
 </a>
 
-<a href="creativesayeedd@email.com" class="btn">
+<a href="creativesayeedd@gmail.com" class="btn">
 ✉️ Email Me
 </a>
 
@@ -761,7 +1475,295 @@ Teaching English and Social Science with concept-based learning and student-frie
 <button id="topBtn">⬆</button>
 </footer>
 <script>
+/* ===== Live Date & Time ===== */
 
+function updateClock(){
+
+const now=new Date();
+
+document.getElementById("liveDate").innerHTML=
+now.toLocaleDateString();
+
+document.getElementById("liveTime").innerHTML=
+now.toLocaleTimeString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+/* ===== Search Section ===== */
+
+function searchSection(){
+
+let text=
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+const ids=[
+"about",
+"skills",
+"services",
+"gallery",
+"contact",
+"education"
+];
+
+for(let id of ids){
+
+if(id.includes(text)){
+
+document
+.getElementById(id)
+.scrollIntoView({
+behavior:"smooth"
+});
+
+return;
+
+}
+
+}
+
+alert("Section not found.");
+
+}
+/* ===== Scroll Percentage Circle ===== */
+
+window.addEventListener("scroll",()=>{
+
+const scrollTop=document.documentElement.scrollTop;
+
+const scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+const percent=Math.round((scrollTop/scrollHeight)*100);
+
+const circle=document.getElementById("scrollCircle");
+
+circle.innerHTML=percent+"%";
+
+circle.style.background=
+`conic-gradient(#1565C0 ${percent*3.6}deg,#e5e5e5 0deg)`;
+
+});
+
+
+/* ===== Cursor Trail ===== */
+
+document.addEventListener("mousemove",(e)=>{
+
+const dot=document.createElement("div");
+
+dot.className="trail";
+
+dot.style.left=e.clientX+"px";
+
+dot.style.top=e.clientY+"px";
+
+document.body.appendChild(dot);
+
+setTimeout(()=>{
+
+dot.remove();
+
+},600);
+
+});
+/* ===== Welcome Toast ===== */
+
+window.addEventListener("load",()=>{
+
+const toast=document.getElementById("welcomeToast");
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},3000);
+
+});
+
+
+/* ===== Better Typing ===== */
+
+const words=[
+"Professional Educator",
+"English Teacher",
+"SST Teacher",
+"Website Owner",
+"Content Creator",
+"Prompt Engineer"
+];
+
+let wordIndex=0;
+let charIndex=0;
+let deleting=false;
+
+function typingEffect(){
+
+const typing=document.getElementById("typing");
+
+const currentWord=words[wordIndex];
+
+if(!deleting){
+
+typing.textContent=currentWord.substring(0,charIndex++);
+
+if(charIndex>currentWord.length){
+
+deleting=true;
+
+setTimeout(typingEffect,1200);
+
+return;
+
+}
+
+}else{
+
+typing.textContent=currentWord.substring(0,charIndex--);
+
+if(charIndex<0){
+
+deleting=false;
+
+wordIndex=(wordIndex+1)%words.length;
+
+}
+
+}
+
+setTimeout(typingEffect,deleting?40:80);
+
+}
+
+typingEffect();
+// ===== Premium Card Tilt =====
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX-rect.left;
+const y=e.clientY-rect.top;
+
+const rotateY=((x/rect.width)-0.5)*12;
+const rotateX=((y/rect.height)-0.5)*-12;
+
+card.style.transform=
+`perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-8px)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform=
+"perspective(1000px) rotateX(0) rotateY(0)";
+
+});
+
+});
+// Premium Navbar Scroll Effect
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>50){
+
+nav.classList.add("scrolled");
+
+}else{
+
+nav.classList.remove("scrolled");
+
+}
+
+});
+// Mouse Glow
+
+const glow=document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove",function(e){
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+// Lightbox
+
+function openImage(src){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightboxImg").src=src;
+
+}
+
+document.getElementById("closeLightbox").onclick=function(){
+
+document.getElementById("lightbox").style.display="none";
+
+};
+
+document.getElementById("lightbox").onclick=function(e){
+
+if(e.target.id==="lightbox"){
+
+this.style.display="none";
+
+}
+
+};
+// Reading Progress Bar
+
+window.addEventListener("scroll",function(){
+
+let scrollTop=document.documentElement.scrollTop;
+
+let scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+let progress=(scrollTop/scrollHeight)*100;
+
+document.getElementById("progressBar").style.width=progress+"%";
+
+});
+// Dark Mode
+
+const darkBtn=document.getElementById("darkModeBtn");
+
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark-mode");
+darkBtn.innerHTML="☀️";
+}
+
+darkBtn.onclick=function(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+
+localStorage.setItem("theme","dark");
+darkBtn.innerHTML="☀️";
+
+}else{
+
+localStorage.setItem("theme","light");
+darkBtn.innerHTML="🌙";
+
+}
+
+};
 // Scroll Animation
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -828,7 +1830,50 @@ counter.innerText=target;
 update();
 
 });
+// Mobile Menu
 
+const menuBtn=document.getElementById("menuToggle");
+
+const navMenu=document.querySelector("nav ul");
+
+menuBtn.onclick=function(){
+
+navMenu.classList.toggle("active");
+
+if(navMenu.classList.contains("active")){
+
+menuBtn.innerHTML="✖";
+
+}else{
+
+menuBtn.innerHTML="☰";
+
+}
+
+};
+
+// Auto Close Menu
+
+document.querySelectorAll("nav ul li a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navMenu.classList.remove("active");
+
+menuBtn.innerHTML="☰";
+
+});
+
+});
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},1200);
+
+});
 </script>
 </body>
 </html>
