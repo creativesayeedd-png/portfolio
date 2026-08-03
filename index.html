@@ -222,10 +222,40 @@ background:#1976d2;
   transform:scale(1.1);
   background:#0d47a1;
 }
+#preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0d47a1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.loader{
+    width:60px;
+    height:60px;
+    border:6px solid rgba(255,255,255,.3);
+    border-top:6px solid #fff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
 </style>
 </head>
 
 <body>
+<div id="preloader">
+    <div class="loader"></div>
+</div>
 <nav>
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
@@ -382,6 +412,9 @@ function topFunction() {
     behavior: "smooth"
   });
 }
+  window.addEventListener("load", function(){
+    document.getElementById("preloader").style.display = "none";
+});
   </script>
   <script>
 const text = "Educator • D.El.Ed • CTET Qualified • Website Owner • Content Creator • Prompt Engineer • 1+ Years Teaching Experience";
