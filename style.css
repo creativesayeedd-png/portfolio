@@ -1740,3 +1740,44 @@ body::after{
         transform:translate(-180px,-120px);
     }
 }
+/* ===============================
+   PREMIUM GLASSMORPHISM
+================================= */
+
+.about-card,
+.service-card,
+.skill-card,
+.project-card,
+.contact-card,
+.timeline-card,
+.certificate-card {
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 35px rgba(0,0,0,.25);
+
+    transition: .4s ease;
+}
+
+.about-card:hover,
+.service-card:hover,
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover,
+.timeline-card:hover,
+.certificate-card:hover{
+
+    transform: translateY(-10px);
+
+    border-color: rgba(0,255,255,.35);
+
+    box-shadow:
+        0 15px 45px rgba(0,255,255,.18);
+}
