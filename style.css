@@ -1819,3 +1819,24 @@ header.scrolled{
     transform:translateY(-12px) scale(1.02);
 
 }
+/* ===============================
+   MAGNETIC BUTTONS
+================================= */
+
+.btn,
+.project-btn{
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+    will-change:transform;
+
+}
+
+.btn:hover,
+.project-btn:hover{
+
+    box-shadow:0 15px 40px rgba(0,212,255,.35);
+
+}
