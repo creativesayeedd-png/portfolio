@@ -278,6 +278,138 @@ margin-bottom:30px;
     line-height:12px;
     border-radius:30px;
 }
+.timeline{
+border-left:4px solid #1565C0;
+margin-top:25px;
+padding-left:25px;
+}
+
+.timeline-item{
+position:relative;
+margin-bottom:30px;
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-34px;
+top:6px;
+width:16px;
+height:16px;
+background:#1565C0;
+border-radius:50%;
+border:3px solid white;
+box-shadow:0 0 10px rgba(21,101,192,.3);
+}
+
+.timeline-item h3{
+color:#1565C0;
+margin-bottom:6px;
+}
+
+.timeline-item p{
+color:#555;
+}
+.certificate-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.certificate-card{
+background:#fff;
+padding:20px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.certificate-card:hover{
+transform:translateY(-8px);
+}
+
+.certificate-card h3{
+color:#1565C0;
+margin-bottom:10px;
+}
+
+.certificate-card p{
+color:#555;
+line-height:1.6;
+}
+.contact-buttons{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:25px;
+}
+
+.contact-buttons .btn{
+width:240px;
+text-align:center;
+}
+
+footer{
+margin-top:50px;
+background:#1565C0;
+color:white;
+text-align:center;
+padding:30px 20px;
+font-size:15px;
+}
+
+footer p{
+margin:8px 0;
+}
+/* Fade Animation */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Scroll To Top Button */
+#topBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#1565C0;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:999;
+}
+
+#topBtn:hover{
+transform:scale(1.1);
+}
+
+/* Counter */
+.counter{
+font-size:38px;
+font-weight:bold;
+color:#1565C0;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+margin-top:30px;
+text-align:center;
+}
 </style>
 
 </head>
@@ -500,5 +632,203 @@ Teaching English and Social Science with concept-based learning and student-frie
     </div>
 
 </section>
+<section id="education" class="card">
+
+<h2>🎓 Education & Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>D.El.Ed</h3>
+<p>Diploma in Elementary Education</p>
+</div>
+
+<div class="timeline-item">
+<h3>CTET Qualified</h3>
+<p>Central Teacher Eligibility Test</p>
+</div>
+
+<div class="timeline-item">
+<h3>1+ Years Teaching Experience</h3>
+<p>English & Social Science Teacher</p>
+</div>
+
+<div class="timeline-item">
+<h3>Website Owner</h3>
+<p>Portfolio & Educational Website Creator</p>
+</div>
+
+</div>
+
+</section>
+<section id="certificates" class="card">
+
+<h2>🏆 Certificates & Achievements</h2>
+
+<div class="certificate-grid">
+
+<div class="certificate-card">
+<h3>📜 CTET Qualified</h3>
+<p>Successfully qualified the Central Teacher Eligibility Test.</p>
+</div>
+
+<div class="certificate-card">
+<h3>🎓 D.El.Ed</h3>
+<p>Completed Diploma in Elementary Education.</p>
+</div>
+
+<div class="certificate-card">
+<h3>💻 Website Development</h3>
+<p>Designed modern portfolio and educational websites.</p>
+</div>
+
+<div class="certificate-card">
+<h3>🎥 Content Creator</h3>
+<p>Created educational content for students and teachers.</p>
+</div>
+
+</div>
+
+<a href="resume.pdf" class="btn">
+📄 Download Resume
+</a>
+
+</section>
+<section id="contact" class="card">
+
+<h2>📞 Contact Me</h2>
+
+<p><strong>📱 Phone:</strong> +91 9124478453</p>
+
+<p><strong>📧 Email:</strong> your@email.com</p>
+
+<p><strong>📍 Location:</strong> Odisha, India</p>
+
+<div class="contact-buttons">
+
+<a href="https://wa.me/919124478453" class="btn" target="_blank">
+💬 WhatsApp
+</a>
+
+<a href="https://www.instagram.com/curious_sayeed?igsh=MTg0M3Vvd3JtODc5aw==" class="btn" target="_blank">
+📷 Instagram
+</a>
+
+<a href="creativesayeedd@email.com" class="btn">
+✉️ Email Me
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Sayeedur Rahman. All Rights Reserved.</p>
+
+<p>Made with ❤️ by Sayeedur Rahman</p>
+
+<section class="card fade">
+
+<h2>📊 My Statistics</h2>
+
+<div class="stats">
+
+<div>
+<div class="counter" data-target="100">0</div>
+<p>Students</p>
+</div>
+
+<div>
+<div class="counter" data-target="20">0</div>
+<p>Projects</p>
+</div>
+
+<div>
+<div class="counter" data-target="2">0</div>
+<p>Years Experience</p>
+</div>
+
+<div>
+<div class="counter" data-target="10">0</div>
+<p>Certificates</p>
+</div>
+
+</div>
+
+</section>
+
+<button id="topBtn">⬆</button>
+</footer>
+<script>
+
+// Scroll Animation
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+
+// Scroll Top Button
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+};
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+};
+
+// Counter Animation
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute("data-target");
+
+const count=+counter.innerText;
+
+const inc=target/80;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count+inc);
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+});
+
+</script>
 </body>
 </html>
